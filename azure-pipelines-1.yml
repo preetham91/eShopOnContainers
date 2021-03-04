@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: '1f2d66e4-fb55-4752-8438-9953e9552e91'
   imageRepository: 'azneweshoponcontainers'
   containerRegistry: 'eshoponcontaineracr.azurecr.io'
-  dockerfilePath: '/src/docker-compose.yml'
+  dockerfilePath: '*/docker-compose.yml'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'eshoponcontaineracr13329749-auth'
 
