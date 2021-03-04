@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: azneweshoponcontainers 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azneweshoponcontainers
+  template:
+    metadata:
+      labels:
+        app: azneweshoponcontainers 
+    spec:
+      containers:
+        - name: azneweshoponcontainers 
+          image: eshoponcontaineracr.azurecr.io/azneweshoponcontainers
+          ports:
+          - containerPort: 80
